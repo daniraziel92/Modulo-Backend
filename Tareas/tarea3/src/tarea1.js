@@ -23,7 +23,7 @@ function formatRegisters() {
                     tags: value.Pelicula.Tags
                 } 
                 console.log(dataFix);
-                return JSON.parse(JSON.stringify(dataFix));
+                return dataFix;
             });
             console.log(dataArray);
             console.log(dataArray[1].movie.tags[1]);

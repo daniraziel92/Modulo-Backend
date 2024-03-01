@@ -11,8 +11,7 @@ async function decodeData() {
     const transformData = new Transform({
         transform(chunk, encoding, callback) {
             const newChunck = atob(chunk.toString());
-            const chunkObject = JSON.stringify(JSON.parse(newChunck));
-            callback(null, chunkObject);
+            callback(null, newChunck);
         }
     });
     readableStream.pipe(transformData).pipe(writableStream);
